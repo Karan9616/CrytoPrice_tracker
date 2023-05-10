@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>HODLINFO</title>
+</head>
+<body>
+    <section>
+    <nav class="navbar ">
+        <div class="fluid">
+          <span class="name">HODLINFO</span>
+        </div>
+        <button type="button" class="btn btn-light" disabled>Connect to Telegram</button>
+      </nav>
+      <div class="container">
+        <div class="list" id="headNames">
+        <h3>ID</h3>
+        <h3>name</h3>
+        <h3>last</h3>
+        <h3>Buy/Sell Price</h3>
+        <h3>volume</h3>
+        <h3>base_unit</h3></div>
+        <% for( i=0 ; i< results.length ; i++) { %>
+            <div class="list" id="details">
+                <h3>
+                    <%= i + 1%>
+                </h3>
+                <h3>
+                    <%= results[i].name%>
+                </h3>
+                <h3>
+                    <%= results[i].last%>
+                </h3>
+                <h3>
+                    <%= results[i].buy%>/<%= results[i].sell%>
+                </h3>
+                <h3>
+                    <%= results[i].volume%>
+                </h3>
+                <h3>
+                    <%= results[i].base_unit%>
+                </h3>
+            </div>
+                <%}%>
+</div>
+    </section>  
+</body>
+</html>
